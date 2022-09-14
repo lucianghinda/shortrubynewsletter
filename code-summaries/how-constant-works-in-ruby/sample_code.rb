@@ -1,4 +1,5 @@
 # Code Summary for https://cirw.in/blog/constant-lookup
+# All examples are run with Ruby 3.1.2
 
 # Part 1/4 Module nesting
 
