@@ -1,5 +1,5 @@
 # Code summary for https://twitter.com/robbyrussell/status/1575164771389014016
-#   including replies with some of my own ideas
+#   including replies and I also added some of my own ideas
 
 # 1️⃣ If you want to open an installed gem
 
