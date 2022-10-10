@@ -5,3 +5,5 @@
 [Excerpt for Issue #11](/excerpts/issue11/index.html)
 
 [Excerpt for Issue #12](/excerpts/issue12/index.html)
+
+[Excerpt for Issue #13](/excerpts/issue13/index.html)
