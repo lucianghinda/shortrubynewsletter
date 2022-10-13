@@ -70,7 +70,7 @@ hash2 = { "Key" => "Value" }
 key2 = hash2.keys.first
 value2 = hash2.values.first
 puts "H2: #{key2.object_id}, #{value2.object_id}" # 180, 220
-puts "H2: #{key2.frozen?}, #{value2.frozen?}" # true, true
+puts "H2: #{key2.frozen?}, #{value2.frozen?}" # true, false
 
 # Keys are the same object
 puts key1.equal?(key2) # true
