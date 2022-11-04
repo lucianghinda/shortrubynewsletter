@@ -24,11 +24,12 @@ puts page({ page: "a12" }) # => 1
 
 # Solution proposed by @jaredwhite@indieweb.social at https://ruby.social/web/@jaredwhite@indieweb.social/109282609587841078
 
+DEFAULT_PAGE = 1
 def brief_page(params)
   [params[:page].to_i, DEFAULT_PAGE].max
 end
 
-puts brief_page({ page: "a12" })
+puts brief_page({ page: "a12" }) # => 1
 
 
 # If I want to raise, I would do something like this
