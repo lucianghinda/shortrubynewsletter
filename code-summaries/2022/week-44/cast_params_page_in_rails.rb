@@ -29,3 +29,37 @@ def brief_page(params)
 end
 
 puts brief_page({ page: "a12" })
+
+
+# If I want to raise, I would do something like this
+
+module Pagination
+  Error = Module.new
+  TypeError = Class.new(NameError) { include Error }
+  ArgumentError = Class.new(ArgumentError) { include Error }
+end
+
+def page(params)
+  Integer(params)
+rescue ArgumentError
+  raise Pagination::ArgumentError
+rescue TypeError
+  raise Pagination::TypeError
+end
+
+# Then, in ApplicationController, I would do something like this:
+
+class ApplicationController
+  rescue_from Pagination::Error, with: -> (error) { render_pagination_error(error) }
+end
+
+# Where rendering an error could be something like this
+def render_pagination_error(error)
+  case error
+  when Pagination::ArgumentError
+    flash[:alert] = "Pagination should be a number"
+  when Pagination::TypeError
+    flash[:alert] = "`page` params is required."
+  end
+  # render ...
+end
