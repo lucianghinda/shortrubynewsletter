@@ -13,3 +13,5 @@
 [Excerpt for Issue #15](/excerpts/issue15/index.html)
 
 [Excerpt for Issue #16](/excerpts/issue16/index.html)
+
+[Excerpt for Issue #17](/excerpts/issue17/index.html)
